@@ -1,0 +1,95 @@
+{
+  "thresholds": {
+    "normal_max": 60,
+    "moderate_max": 80,
+    "congested_min": 81
+  },
+  "congestion_model": {
+    "penalty_weight": 10.0,
+    "description": "effective_cost = base_cost + (utilization / 100) * penalty_weight"
+  },
+  "nodes": ["S1", "S2", "S3", "S4", "S5", "S6"],
+  "links": [
+    {
+      "source": "S1",
+      "destination": "S2",
+      "cost": 2,
+      "capacity": 100,
+      "utilization": 25,
+      "latency": 10,
+      "status": "UP"
+    },
+    {
+      "source": "S1",
+      "destination": "S3",
+      "cost": 3,
+      "capacity": 100,
+      "utilization": 20,
+      "latency": 12,
+      "status": "UP"
+    },
+    {
+      "source": "S2",
+      "destination": "S4",
+      "cost": 2,
+      "capacity": 100,
+      "utilization": 30,
+      "latency": 10,
+      "status": "UP"
+    },
+    {
+      "source": "S2",
+      "destination": "S5",
+      "cost": 4,
+      "capacity": 100,
+      "utilization": 22,
+      "latency": 14,
+      "status": "UP"
+    },
+    {
+      "source": "S3",
+      "destination": "S5",
+      "cost": 3,
+      "capacity": 100,
+      "utilization": 18,
+      "latency": 11,
+      "status": "UP"
+    },
+    {
+      "source": "S3",
+      "destination": "S6",
+      "cost": 12,
+      "capacity": 80,
+      "utilization": 15,
+      "latency": 18,
+      "status": "UP"
+    },
+    {
+      "source": "S4",
+      "destination": "S5",
+      "cost": 2,
+      "capacity": 100,
+      "utilization": 20,
+      "latency": 8,
+      "status": "UP"
+    },
+    {
+      "source": "S4",
+      "destination": "S6",
+      "cost": 2,
+      "capacity": 100,
+      "utilization": 28,
+      "latency": 10,
+      "status": "UP"
+    },
+    {
+      "source": "S5",
+      "destination": "S6",
+      "cost": 3,
+      "capacity": 100,
+      "utilization": 16,
+      "latency": 9,
+      "status": "UP"
+    }
+  ]
+}
